@@ -1,0 +1,142 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: woo-restricted-content\n"
+"POT-Creation-Date: 2021-08-07 22:50+0200\n"
+"PO-Revision-Date: 2021-08-07 22:51+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: ../inc\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
+"|| n%100>14) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions.php:126
+msgid "Hidden content"
+msgstr "Treść ukryta"
+
+#: menu.php:9
+msgid ""
+"Restricted content for users who have not purchased the indicated product"
+msgstr ""
+"Zawartość ukryta dla użytkowników, którzy nie kupili określonego produktu"
+
+#: menu.php:19
+msgid "You do not have sufficient permissions to access this page"
+msgstr "Nie masz wystarczających uprawnień, aby uzyskać dostęp do tej strony"
+
+#: menu.php:30
+msgid "All changes have been saved"
+msgstr "Wszystkie zmiany zostały zapisane"
+
+#: menu.php:38
+msgid "Restricted content settings"
+msgstr "Ustawienia ukrytej zawartości"
+
+#: menu.php:41
+msgid "Default replacement content"
+msgstr "Standardowa treść zastępcza"
+
+#: menu.php:51
+msgid "Excerpt settings*"
+msgstr "Ustawienia zajawki*"
+
+#: menu.php:52
+msgid ""
+"*These options are active when the \"Hide content and display only excerpt\" "
+"option is used"
+msgstr ""
+"*Te opcje są aktywne kiedy używana jest opcja \"Ukryj treść i pokaż tylko "
+"zajawkę\""
+
+#: menu.php:57
+msgid "Excerpt length"
+msgstr "Długość zajawki"
+
+#: menu.php:71
+msgid ""
+"The length of the automatically generated excerpt. It does not apply to "
+"custom post excerpt."
+msgstr ""
+"Długość automatycznie wygenerowanej zajawki. Nie dotyczy własnej zajawki."
+
+#: menu.php:77
+msgid "Excerpt fading"
+msgstr "Zanikająca zajawka"
+
+#: menu.php:83
+msgid "Disable excerpt fading"
+msgstr "Wyłącz zanikanie zajawki"
+
+#: menu.php:86
+msgid "Enable excerpt fading*"
+msgstr "Włącz zanikanie zajawki*"
+
+#: menu.php:88
+msgid "*works fine when the background color is white"
+msgstr "*działa poprawnie gdy kolor tła jest biały"
+
+#: menu.php:98
+msgid "Save changes"
+msgstr "Zapisz zmiany"
+
+#: menu.php:103 post_options.php:91
+msgid ""
+"You can limit the visibility of content in the post options or by using a "
+"shortcode - just wrap the content between the opening tag: "
+"<br><br><strong>[woorescon product_id=\"33\"]</strong>&nbsp;&nbsp; and "
+"closing tag:&nbsp;&nbsp; <strong>[/woorescon]</strong>.<br></br> Enter the "
+"product id as value of the \"product_id\" attribute."
+msgstr ""
+"Możesz ograniczyć widoczność treści w opcjach postu lub za pomocą shortcode "
+"- po prostu umieść treść między tagiem otwierającym: "
+"<br><br><strong>[woorescon product_id=\"33\"]</strong>&nbsp;&nbsp; a tagiem "
+"zamykającym:&nbsp;&nbsp; <strong>[/woorescon]</strong>.<br></br> Wpisz id "
+"produktu jako wartość atrybutu \"product_id\"."
+
+#: post_options.php:55
+msgid "Restricted content options"
+msgstr "Opcje ukrytej zawartości"
+
+#: post_options.php:66
+msgid "Show content"
+msgstr "Pokaż treść"
+
+#: post_options.php:67
+msgid "Hide content and display default placeholder content"
+msgstr "Ukryj treść i pokaż standardową treść zastępczą"
+
+#: post_options.php:68
+msgid "Hide content and display only excerpt and default content"
+msgstr "Ukryj treść i pokaż tylko zajawkę i treść zastępczą"
+
+#: post_options.php:69
+msgid "Redirect to another page"
+msgstr "Przekieruj do innej strony"
+
+#: post_options.php:72
+msgid "Set restricted content options"
+msgstr "Wybierz opcje ukrytej zawartości"
+
+#: post_options.php:77
+msgid "Required product"
+msgstr "Wymagany produkt"
+
+#: post_options.php:83
+msgid "Redirect page"
+msgstr "Strona przekierowania"
+
+#: post_options.php:114
+msgid "Select product"
+msgstr "Wybierz produkt"
+
+#~ msgid "Fading excerpt"
+#~ msgstr "Znikająca zajawka"
+
+#~ msgid "Meta Information"
+#~ msgstr "Informacje meta"

@@ -34,7 +34,10 @@ The plugin is a simple solution for websites offering paid content such as onlin
 
 == Installation ==
 
-Upload the Restricted content based on purchase plugin to your blog and activate it.
+1. Make sure WooCommerce is installed. 
+2. Upload the plugin to your WordPress site and activate it.
+3. Go to `Restricted Content` page, where you can change what settings you need.
+4. Set restricted content options in the post or page edit screen. 
 
 == Frequently Asked Questions ==
 

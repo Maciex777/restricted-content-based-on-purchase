@@ -3,6 +3,6 @@
 if (!defined('WP_UNINSTALL_PLUGIN'))
   exit();
 
-delete_option(woorescon_custom_text);
-delete_option(woorescon_fading_excerpt_info);
-delete_option(woorescon_excerpt_length);
+delete_option(resconbop_custom_text);
+delete_option(resconbop_fading_excerpt_info);
+delete_option(resconbop_excerpt_length);

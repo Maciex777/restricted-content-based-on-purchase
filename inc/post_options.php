@@ -3,18 +3,18 @@
 defined( 'ABSPATH' ) || exit;
 
 /* Zdefiniowanie własnegoo pola */
-add_action( 'add_meta_boxes', 'woorescon_post_options_metabox' );
+add_action( 'add_meta_boxes', 'resconbop_post_options_metabox' );
 
-add_action( 'admin_init', 'woorescon_post_options_metabox', 1 );
+add_action( 'admin_init', 'resconbop_post_options_metabox', 1 );
 
 /* Zapisanie wprowadzonych danych */
-add_action( 'save_post', 'woorescon_save_post_options' );
+add_action( 'save_post', 'resconbop_save_post_options' );
 
 
 /**
  * Zapisanie własnych danych w momencie zapisania wpisu
  */
-function woorescon_save_post_options( $post_id ) {
+function resconbop_save_post_options( $post_id ) {
   // sprawdź, czy jest to procedura automatycznego zapisu.
   // Jeśli to nasz formularz nie został przesłany nie zostanie wykonana żadna akcja
   if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
@@ -34,12 +34,12 @@ function woorescon_save_post_options( $post_id ) {
       if ( !current_user_can( 'edit_post', $post_id ) ) {
           return;
       } else {
-          $meta_info_field = sanitize_key($_POST['woorescon_meta_info']);
-          $product_select_field = sanitize_text_field($_POST['woorescon_product_select']);
-          $selected_page_id_field = sanitize_text_field($_POST['woorescon_selected_page_id']);
-          update_post_meta( $post_id, 'woorescon_meta_info', $meta_info_field );
-          update_post_meta( $post_id, 'woorescon_product_select', $product_select_field );
-          update_post_meta( $post_id, 'woorescon_selected_page_id', $selected_page_id_field );
+          $meta_info_field = sanitize_key($_POST['resconbop_meta_info']);
+          $product_select_field = sanitize_text_field($_POST['resconbop_product_select']);
+          $selected_page_id_field = sanitize_text_field($_POST['resconbop_selected_page_id']);
+          update_post_meta( $post_id, 'resconbop_meta_info', $meta_info_field );
+          update_post_meta( $post_id, 'resconbop_product_select', $product_select_field );
+          update_post_meta( $post_id, 'resconbop_selected_page_id', $selected_page_id_field );
       }
   }
 
@@ -50,48 +50,48 @@ function woorescon_save_post_options( $post_id ) {
  *  Dodanie pola z opcjami w edycji wpisu, strony lub produktu
  *
  */
-function woorescon_post_options_metabox() {
+function resconbop_post_options_metabox() {
     /* Tylko wpisy */
-    // add_meta_box( 'post_options', __( 'Restricted options' ), 'woorescon_post_options_code', 'post', 'normal', 'high' );
+    // add_meta_box( 'post_options', __( 'Restricted options' ), 'resconbop_post_options_code', 'post', 'normal', 'high' );
 
     /* Wpisy i strony*/
-    add_meta_box( 'post_options', __( 'Restricted content options', 'woo-restricted-content' ), 'woorescon_post_options_code', array('post', 'page'), 'normal', 'high' );
+    add_meta_box( 'post_options', __( 'Restricted content options', 'restricted-content-based-on-purchase' ), 'resconbop_post_options_code', array('post', 'page'), 'normal', 'high' );
 }
 
 /**
  *  Wyświetlenie pól opcji
  */
-function woorescon_post_options_code( $post ) {
+function resconbop_post_options_code( $post ) {
     wp_nonce_field( plugin_basename( __FILE__ ), $post->post_type . '_noncename' );
-    $woorescon_meta_info = get_post_meta( $post->ID, 'woorescon_meta_info', true) ? get_post_meta( $post->ID, 'woorescon_meta_info', true) : 1; ?>
+    $resconbop_meta_info = get_post_meta( $post->ID, 'resconbop_meta_info', true) ? get_post_meta( $post->ID, 'resconbop_meta_info', true) : 1; ?>
 
     <div class="alignleft">
-        <input id="woorescon_show_default_meta" type="radio" name="woorescon_meta_info" value="show_default_meta"<?php checked( 'show_default_meta', $woorescon_meta_info ); ?><?php echo ( $woorescon_meta_info == 1 )?' checked="checked"' : ''; ?> /> <label for="show_default_meta" class="selectit"><?php _e( 'Show content', 'woo-restricted-content' ); ?></label><br />
-        <input id="woorescon_hide_default_meta" type="radio" name="woorescon_meta_info" value="hide_default_meta"<?php checked( 'hide_default_meta', $woorescon_meta_info ); ?> /> <label for="hide_default_meta" class="selectit"><?php _e( 'Hide content and display default placeholder content', 'woo-restricted-content' ); ?></label><br />
-        <input id="woorescon_hide_excerpt_meta" type="radio" name="woorescon_meta_info" value="hide_excerpt_meta"<?php checked( 'hide_excerpt_meta', $woorescon_meta_info ); ?> /> <label for="hide_excerpt_meta" class="selectit"><?php _e( 'Hide content and display only excerpt and default content', 'woo-restricted-content' ); ?></label><br />
-        <input id="woorescon_redirect_meta" type="radio" name="woorescon_meta_info" value="redirect_meta"<?php checked( 'redirect_meta', $woorescon_meta_info ); ?> /> <label for="redirect_meta" class="selectit"><?php _e( 'Redirect to another page', 'woo-restricted-content' ); ?></label><br />
+        <input id="resconbop_show_default_meta" type="radio" name="resconbop_meta_info" value="show_default_meta"<?php checked( 'show_default_meta', $resconbop_meta_info ); ?><?php echo ( $resconbop_meta_info == 1 )?' checked="checked"' : ''; ?> /> <label for="show_default_meta" class="selectit"><?php _e( 'Show content', 'restricted-content-based-on-purchase' ); ?></label><br />
+        <input id="resconbop_hide_default_meta" type="radio" name="resconbop_meta_info" value="hide_default_meta"<?php checked( 'hide_default_meta', $resconbop_meta_info ); ?> /> <label for="hide_default_meta" class="selectit"><?php _e( 'Hide content and display default placeholder content', 'restricted-content-based-on-purchase' ); ?></label><br />
+        <input id="resconbop_hide_excerpt_meta" type="radio" name="resconbop_meta_info" value="hide_excerpt_meta"<?php checked( 'hide_excerpt_meta', $resconbop_meta_info ); ?> /> <label for="hide_excerpt_meta" class="selectit"><?php _e( 'Hide content and display only excerpt and default content', 'restricted-content-based-on-purchase' ); ?></label><br />
+        <input id="resconbop_redirect_meta" type="radio" name="resconbop_meta_info" value="redirect_meta"<?php checked( 'redirect_meta', $resconbop_meta_info ); ?> /> <label for="redirect_meta" class="selectit"><?php _e( 'Redirect to another page', 'restricted-content-based-on-purchase' ); ?></label><br />
     </div>
     <div class="alignright">
-        <p class="description"><?php _e( 'Set restricted content options', 'woo-restricted-content' ); ?></p>
+        <p class="description"><?php _e( 'Set restricted content options', 'restricted-content-based-on-purchase' ); ?></p>
     </div>
     <div class="clear"></div>
     <hr />
-    <div class="woorescon-selected-product">
-      <h2><?php _e('Required product', 'woo-restricted-content'); ?></h2>
+    <div class="resconbop-selected-product">
+      <h2><?php _e('Required product', 'restricted-content-based-on-purchase'); ?></h2>
       <?php
-      echo woorescon_products_dropdown( $post );
+      echo resconbop_products_dropdown( $post );
       ?>
     </div>
-    <div class="woorescon-selected-page">
-      <h2><?php _e('Redirect page', 'woo-restricted-content'); ?></h2>
+    <div class="resconbop-selected-page">
+      <h2><?php _e('Redirect page', 'restricted-content-based-on-purchase'); ?></h2>
       <?php
-      wp_dropdown_pages(array('name' => 'woorescon_selected_page_id'));
+      wp_dropdown_pages(array('name' => 'resconbop_selected_page_id'));
       ?>
     </div>
     <hr />
     <div class="card">
         <h2>Shortcode</h2>
-        <span class="description"><?php _e( 'You can limit the visibility of content in the post options or by using a shortcode - just wrap the content between the opening tag: <br><br><strong>[woorescon product_id="33"]</strong>&nbsp;&nbsp; and closing tag:&nbsp;&nbsp; <strong>[/woorescon]</strong>.<br></br> Enter the product id as value of the "product_id" attribute.', 'woo-restricted-content' ); ?></span>
+        <span class="description"><?php _e( 'You can limit the visibility of content in the post options or by using a shortcode - just wrap the content between the opening tag: <br><br><strong>[rescon id="33"]</strong>&nbsp;&nbsp; and closing tag:&nbsp;&nbsp; <strong>[/rescon]</strong>.<br></br> Enter the product id as value of the "id" attribute.', 'restricted-content-based-on-purchase' ); ?></span>
     </div>
     <?php
 }
@@ -100,7 +100,7 @@ function woorescon_post_options_code( $post ) {
 /**
  * lista rozwijana z wyborem produktów
  */
-function woorescon_products_dropdown( $post ) {
+function resconbop_products_dropdown( $post ) {
 
     ob_start();
 
@@ -113,22 +113,26 @@ function woorescon_products_dropdown( $post ) {
 
     if ( $query->have_posts() ) :
 
-    echo '<div class="products-dropdown"><select name="woorescon_product_select" id="woorescon-product-select">
-    <option value="">'.__( 'Select product', 'woo-restricted-content' ).'</option>';
+      echo '<div class="products-dropdown"><select name="resconbop_product_select" id="resconbop-product-select">
+      <option value="">'.__( 'Select product', 'restricted-content-based-on-purchase' ).'</option>';
 
-    while ( $query->have_posts() ) : $query->the_post();
+      while ( $query->have_posts() ) : $query->the_post();
 
-    echo '<option ';
-     if ($post->woorescon_product_select == get_the_ID()) {
-       echo 'selected="true"';
-     }
-    echo ' value="'.get_the_ID().'">'.get_the_title().'</option>';
+        echo '<option ';
+         if ($post->resconbop_product_select == get_the_ID()) {
+           echo 'selected="true"';
+         }
+        echo ' value="'.get_the_ID().'">'.get_the_title().'</option>';
 
-    endwhile;
+      endwhile;
 
-    echo '</select></div>';
+      echo '</select></div>';
 
-    wp_reset_postdata();
+      wp_reset_postdata();
+
+    else:
+
+      echo '<p class="description">'.__( 'You have no products', 'restricted-content-based-on-purchase' ).'</p>';
 
     endif;
 

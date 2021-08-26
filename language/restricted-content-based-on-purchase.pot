@@ -1,0 +1,121 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: restricted-content-based-on-purchase\n"
+"POT-Creation-Date: 2021-08-26 11:47+0200\n"
+"PO-Revision-Date: 2021-08-05 08:43+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: ../inc\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions.php:117
+msgid "Hidden content"
+msgstr ""
+
+#: menu.php:9
+msgid "Restricted content for users who have not purchased the indicated product"
+msgstr ""
+
+#: menu.php:19
+msgid "You do not have sufficient permissions to access this page"
+msgstr ""
+
+#: menu.php:33
+msgid "All changes have been saved"
+msgstr ""
+
+#: menu.php:41
+msgid "Restricted content settings"
+msgstr ""
+
+#: menu.php:44
+msgid "Default replacement content"
+msgstr ""
+
+#: menu.php:54
+msgid "Excerpt settings*"
+msgstr ""
+
+#: menu.php:55
+msgid "*These options are active when the \"Hide content and display only excerpt\" option is used"
+msgstr ""
+
+#: menu.php:60
+msgid "Excerpt length"
+msgstr ""
+
+#: menu.php:74
+msgid "The length of the automatically generated excerpt. It does not apply to custom post excerpt."
+msgstr ""
+
+#: menu.php:80
+msgid "Excerpt fading"
+msgstr ""
+
+#: menu.php:86
+msgid "Disable excerpt fading"
+msgstr ""
+
+#: menu.php:89
+msgid "Enable excerpt fading*"
+msgstr ""
+
+#: menu.php:91
+msgid "*works fine when the background color is white"
+msgstr ""
+
+#: menu.php:101
+msgid "Save changes"
+msgstr ""
+
+#: menu.php:106 post_options.php:94
+msgid "You can limit the visibility of content in the post options or by using a shortcode - just wrap the content between the opening tag: <br><br><strong>[rescon id=\"33\"]</strong>&nbsp;&nbsp; and closing tag:&nbsp;&nbsp; <strong>[/rescon]</strong>.<br></br> Enter the product id as value of the \"id\" attribute."
+msgstr ""
+
+#: post_options.php:58
+msgid "Restricted content options"
+msgstr ""
+
+#: post_options.php:69
+msgid "Show content"
+msgstr ""
+
+#: post_options.php:70
+msgid "Hide content and display default placeholder content"
+msgstr ""
+
+#: post_options.php:71
+msgid "Hide content and display only excerpt and default content"
+msgstr ""
+
+#: post_options.php:72
+msgid "Redirect to another page"
+msgstr ""
+
+#: post_options.php:75
+msgid "Set restricted content options"
+msgstr ""
+
+#: post_options.php:80
+msgid "Required product"
+msgstr ""
+
+#: post_options.php:86
+msgid "Redirect page"
+msgstr ""
+
+#: post_options.php:117
+msgid "Select product"
+msgstr ""
+
+#: post_options.php:135
+msgid "You have no products"
+msgstr ""

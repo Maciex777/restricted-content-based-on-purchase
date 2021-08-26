@@ -3,7 +3,7 @@
  */
 /*
 Plugin Name: Restricted content based on purchase
-Plugin URI: https://wordpress.org/plugins/woo-restricted-content
+Plugin URI: https://wordpress.org/plugins/restricted-content-based-on-purchase
 Description: Restricted content for users who have not purchased the indicated product
 Version: 1.0.0
 Author: Maciej Molenda
@@ -13,8 +13,8 @@ License: GPLv2 or later
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'WOORESCON_URL', plugin_dir_url( __FILE__ ) );
-define( 'WOORESCON_DIR', dirname( plugin_basename( __FILE__ ) ) );
+define( 'RESCONBOP_URL', plugin_dir_url( __FILE__ ) );
+define( 'RESCONBOP_DIR', dirname( plugin_basename( __FILE__ ) ) );
 
 include_once('inc/functions.php');
 include_once('inc/menu.php');

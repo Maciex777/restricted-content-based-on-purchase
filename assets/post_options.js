@@ -3,21 +3,21 @@ jQuery(function($){
   $(document).ready(function(){
     dropdownListVisibility();
   });
-  $('input:radio[name="woorescon_meta_info"]').change(function(){
+  $('input:radio[name="resconbop_meta_info"]').change(function(){
     dropdownListVisibility();
   });
 
   function dropdownListVisibility() {
-    if($('#woorescon_show_default_meta').is(':checked')) {
-      $('.woorescon-selected-product').hide();
+    if($('#resconbop_show_default_meta').is(':checked')) {
+      $('.resconbop-selected-product').hide();
     } else {
-      $('.woorescon-selected-product').show();
+      $('.resconbop-selected-product').show();
     }
 
-    if($('#woorescon_redirect_meta').is(':checked')) {
-      $('.woorescon-selected-page').show();
+    if($('#resconbop_redirect_meta').is(':checked')) {
+      $('.resconbop-selected-page').show();
     } else {
-      $('.woorescon-selected-page').hide();
+      $('.resconbop-selected-page').hide();
     }
   };
 

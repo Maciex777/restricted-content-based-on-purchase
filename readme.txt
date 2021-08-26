@@ -43,7 +43,7 @@ The plugin is a simple solution for websites offering paid content such as onlin
 
 = How to use the shortcode? =
 
-You can limit the visibility of content by using a shortcode - just wrap the content between [woorescon product_id="33"] and [/woorescon]. Enter the product id as value of the "product_id" attribute.
+You can limit the visibility of content by using a shortcode - just wrap the content between [rescon id="33"] and [/rescon]. Enter the product id as value of the "id" attribute.
 
 = Where can i get product id? =
 
@@ -55,7 +55,7 @@ Probably the post/page has its own custom excerpt. The length in the restricted 
 
 = Why the fading excerpt effect looks bad when there is a different background color and how to fix it? =
 
-This is because the fading effect is adapted to the white background color. This can be easily fixed by adding a css rule: .fading-excerpt.woorescon_hidden_excerpt::before{ background: [YOUR-BACKGROUND-COLOR] !important; } (replace the [YOUR-BACKGROUND-COLOR] with your background color).
+This is because the fading effect is adapted to the white background color. This can be easily fixed by adding a css rule: .fading-excerpt.resconbop_hidden_excerpt::before{ background: [YOUR-BACKGROUND-COLOR] !important; } (replace the [YOUR-BACKGROUND-COLOR] with your background color).
 
 == Changelog ==
 

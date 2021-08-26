@@ -1,7 +1,7 @@
-.fading-excerpt.woorescon_hidden_excerpt{
+.fading-excerpt.resconbop_hidden_excerpt{
   position: relative;
 }
-.fading-excerpt.woorescon_hidden_excerpt::before{
+.fading-excerpt.resconbop_hidden_excerpt::before{
   position: absolute;
   content:'';
   width:100%;

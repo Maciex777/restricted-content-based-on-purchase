@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: restricted-content-based-on-purchase\n"
-"POT-Creation-Date: 2021-08-26 11:46+0200\n"
-"PO-Revision-Date: 2021-08-26 11:47+0200\n"
+"POT-Creation-Date: 2021-08-30 17:30+0200\n"
+"PO-Revision-Date: 2021-08-30 17:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pl_PL\n"
@@ -74,18 +74,14 @@ msgid "Disable excerpt fading"
 msgstr "Wyłącz zanikanie zajawki"
 
 #: menu.php:89
-msgid "Enable excerpt fading*"
-msgstr "Włącz zanikanie zajawki*"
+msgid "Enable excerpt fading"
+msgstr "Włącz zanikanie zajawki"
 
-#: menu.php:91
-msgid "*works fine when the background color is white"
-msgstr "*działa poprawnie gdy kolor tła jest biały"
-
-#: menu.php:101
+#: menu.php:100
 msgid "Save changes"
 msgstr "Zapisz zmiany"
 
-#: menu.php:106 post_options.php:94
+#: menu.php:105 post_options.php:94
 msgid ""
 "You can limit the visibility of content in the post options or by using a "
 "shortcode - just wrap the content between the opening tag: "
@@ -137,6 +133,9 @@ msgstr "Wybierz produkt"
 #: post_options.php:135
 msgid "You have no products"
 msgstr "Nie masz żadnych produktów"
+
+#~ msgid "*works fine when the background color is white"
+#~ msgstr "*działa poprawnie gdy kolor tła jest biały"
 
 #~ msgid "Fading excerpt"
 #~ msgstr "Znikająca zajawka"

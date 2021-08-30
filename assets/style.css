@@ -11,8 +11,8 @@
   right: 0;
   top:0;
   bottom: 0;
-  /* background:linear-gradient(transparent 20%, #fff); */
   background: #fff;
+  background: var(--global--color-background, #fff);
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
   mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
 }

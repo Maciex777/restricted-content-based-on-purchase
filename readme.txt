@@ -3,7 +3,7 @@ Contributors: maciex777
 Tags: restricted content, hidden content
 Requires at least: 4.0
 Tested up to: 5.8
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,11 +53,14 @@ Enter the product edit screen and see what number is in the url after ?post=. Th
 
 Probably the post/page has its own custom excerpt. The length in the restricted content settings refers to the automatically generated excerpt extracted from the content of the post/page. 
 
-= Why the fading excerpt effect looks bad when there is a different background color and how to fix it? =
-
-This is because the fading effect is adapted to the white background color. This can be easily fixed by adding a css rule: .fading-excerpt.resconbop_hidden_excerpt::before{ background: [YOUR-BACKGROUND-COLOR] !important; } (replace the [YOUR-BACKGROUND-COLOR] with your background color).
-
 == Changelog ==
 
-= 1.0 =
-First stable version
+= 1.0.1 =
+*Release Date - 30 August 2021*
+
+* added background compatibility of the excerpt with the global color background when the fading effect is enable
+
+= 1.0.0 =
+*Release Date - 26 August 2021*
+
+* First stable version.

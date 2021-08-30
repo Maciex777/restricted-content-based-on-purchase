@@ -86,9 +86,8 @@ function resconbop_options(){
                       <input type="radio" name="resconbop_fading_excerpt_info" value="hide_fading_excerpt"<?php checked( 'hide_fading_excerpt', $resconbop_fading_excerpt ); ?> /> <label for="hide_fading_excerpt" class="selectit"><?php _e( 'Disable excerpt fading', 'restricted-content-based-on-purchase' ); ?></label><br />
                     </label><br>
                     <label>
-                      <input type="radio" name="resconbop_fading_excerpt_info" value="show_fading_excerpt"<?php checked( 'show_fading_excerpt', $resconbop_fading_excerpt ); ?><?php echo ( $resconbop_fading_excerpt == 1 )?' checked="checked"' : ''; ?> /> <label for="show_fading_excerpt" class="selectit"><?php _e( 'Enable excerpt fading*', 'restricted-content-based-on-purchase' ); ?></label><br />
+                      <input type="radio" name="resconbop_fading_excerpt_info" value="show_fading_excerpt"<?php checked( 'show_fading_excerpt', $resconbop_fading_excerpt ); ?><?php echo ( $resconbop_fading_excerpt == 1 )?' checked="checked"' : ''; ?> /> <label for="show_fading_excerpt" class="selectit"><?php _e( 'Enable excerpt fading', 'restricted-content-based-on-purchase' ); ?></label><br />
                     </label>
-                    <p class="description"><?php _e('*works fine when the background color is white', 'restricted-content-based-on-purchase'); ?></p>
                   </fieldset>
                 </td>
               </tr>

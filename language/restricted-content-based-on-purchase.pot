@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: restricted-content-based-on-purchase\n"
-"POT-Creation-Date: 2021-08-26 11:47+0200\n"
+"POT-Creation-Date: 2021-08-30 17:30+0200\n"
 "PO-Revision-Date: 2021-08-05 08:43+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -65,18 +65,14 @@ msgid "Disable excerpt fading"
 msgstr ""
 
 #: menu.php:89
-msgid "Enable excerpt fading*"
+msgid "Enable excerpt fading"
 msgstr ""
 
-#: menu.php:91
-msgid "*works fine when the background color is white"
-msgstr ""
-
-#: menu.php:101
+#: menu.php:100
 msgid "Save changes"
 msgstr ""
 
-#: menu.php:106 post_options.php:94
+#: menu.php:105 post_options.php:94
 msgid "You can limit the visibility of content in the post options or by using a shortcode - just wrap the content between the opening tag: <br><br><strong>[rescon id=\"33\"]</strong>&nbsp;&nbsp; and closing tag:&nbsp;&nbsp; <strong>[/rescon]</strong>.<br></br> Enter the product id as value of the \"id\" attribute."
 msgstr ""
 

@@ -5,7 +5,7 @@
 Plugin Name: Restricted content based on purchase
 Plugin URI: https://wordpress.org/plugins/restricted-content-based-on-purchase
 Description: Restricted content for users who have not purchased the indicated product
-Version: 1.0.0
+Version: 1.0.1
 Author: Maciej Molenda
 Author URI: https://profiles.wordpress.org/maciex777/
 License: GPLv2 or later
